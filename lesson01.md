@@ -111,8 +111,8 @@ How do you keep versions without a version control system?
 </div>
 
 * HEAD - pointer the current commit/branch you are viewing
-* Checkout - changing what HEAD is pointing to 
-* Merge - 
+* detached HEAD - A state [when HEAD](https://www.cloudbees.com/blog/git-detached-head) is pointing to commit directly
+* Merge - joining two or more commit histories
 
 
 ---
@@ -126,9 +126,10 @@ Files in Git has three main states: modified, staged, and committed:
 </div>
 
 * Staging area - a file that stores the changes to be saved in the next commit (also called index)
-* Stash 
-* .git directory - where Git stores the metadata and object database for your project
-
+* Stash - Save and clean staging area with commit (temporary "shelf")
+* Checkout - changing what HEAD is pointing to  (and reset index)
+* `.git` directory - where Git stores the metadata and object database for your project
+* `.git` directory is auto-managed - do not modify it yourself!
 ---
 
 ### Git [fundamentals](https://www.youtube.com/watch?v=_ALeswWzpBo)
@@ -137,12 +138,13 @@ Practice - part 1 (first commit)
 ```
 1. git init
 2. git status
-3. create a file named: 1.txt (content "initial")
-4. git status
-5. git add 1.txt
-6. git status
-7. git commit -m "first commit"
-8. git log
+3. look for your .git directory
+4. create a file named: 1.txt (content "initial")
+5. git status
+6. git add 1.txt
+7. git status
+8. git commit -m "first commit"
+9. git log (note the sha1 hash)
 ```
 
 ---
@@ -162,7 +164,11 @@ Practice - part 2 (more commits)
 ```
 
 
+---
 
+### Git [fundamentals](https://www.youtube.com/watch?v=_ALeswWzpBo)
+
+A word about HEAD and [DETACHED HEAD](https://git-scm.com/docs/git-checkout#_detached_head)
 
 ---
 
@@ -240,18 +246,25 @@ Practice - part 6 (amend)
 7. git commit --amend
 8. git log
 ```
-
 ---
 
 ### Git [fundamentals](https://www.youtube.com/watch?v=_ALeswWzpBo)
-Practice - part 7 ( drop changes and [reset](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset))
+Practice - part 7 ( drop changes)
 ```
 1. echo 'new content' > 2.txt
 2. git status
-3. git checkout branch1
+3. git checkout branch1 / git checkout -- 2.txt
 4. git status
-5. git log --oneline
-6. git reset --soft HEAD^1
+```
+---
+
+### Git [fundamentals](https://www.youtube.com/watch?v=_ALeswWzpBo)
+Practice - part 7 ([reset](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset))
+```
+1. git status
+2. git log --oneline
+3. git reset --soft HEAD^1
+1. git status
 
 ```
 
@@ -264,7 +277,6 @@ Summary
 * Commands used: init, add, commit, status, branch, checkout, merge, stash, amend, reset
 * Branches are just pointers
 * Main is just a standard branch
-* A word about HEAD and [DETACHED HEAD](https://git-scm.com/docs/git-checkout#_detached_head)
 
 ---
 
