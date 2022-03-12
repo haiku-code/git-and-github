@@ -2,11 +2,11 @@
   "name": "git-and-github",
   "author": "Yuval Bar Levi",
   "scripts": {
-    "1": "reveal-md ./module1_fundamentals/lesson01.md",
-    "2": "reveal-md ./module1_fundamentals/lesson02.md  --theme league",
-    "3": "reveal-md ./module1_fundamentals/lesson03.md  --theme serif",
-    "4": "reveal-md ./module1_fundamentals/lesson04.md  --theme sky",
-    "4:light": "reveal-md ./module1_fundamentals/lesson04.md  --theme solarized",
-    "4:dark": "reveal-md ./module1_fundamentals/lesson06.md  --theme night"
+    "1": "reveal-md ./lesson01.md",
+    "2": "reveal-md ./lesson02.md  --theme night",
+    "3": "reveal-md ./lesson03.md  --theme serif",
+    "4": "reveal-md ./lesson04.md  --theme sky",
+    "4:light": "reveal-md ./lesson04.md  --theme solarized",
+    "4:dark": "reveal-md ./lesson04.md  --theme night"
   }
 }

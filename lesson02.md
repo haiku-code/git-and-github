@@ -10,15 +10,12 @@
 1. Review our actions
 1. Terminology recap
 
-
-* [Git terminology](https://opensource.com/article/19/2/git-terminology)
-
 ---
 
 ### Intro to Remotes
 What is a remote repository?
 
-* Remote repository is a version of your project, hosted in a cloud
+* A version of your project, hosted in a cloud
 <!-- .element: class="fragment" -->
 
 * Git can work locally, but in most cases - a remote repository is required
@@ -27,7 +24,7 @@ What is a remote repository?
 * Remote repository (or simply remote) is called `origin` by default
 <!-- .element: class="fragment" -->
 
-* Git designed for distributed work (or even offline) - you'll need to sync with the remote yourself
+* Git designed for distributed (offline) work - you'll need to sync with the remote yourself
 <!-- .element: class="fragment" -->
 
 * Upstream and Downstream
@@ -56,8 +53,9 @@ What is a remote repository?
 
 ### Intro to Remotes
 
-//TODO: image with local and remote repo
-
+<div>
+    <img src="./assets/remote.jpg" height="500">
+</div>
 
 ---
 
@@ -66,13 +64,23 @@ What is a remote repository?
 What is Github?
 (vs gitlab vs bitbucket)
 
+[Features Overview](https://github.com/hasadna/anyway-newsflash-infographics)
+
+Tip: To show in web editor - replace `com` with `dev`
+<!-- .element: class="fragment" -->
+
 ---
 
 ### Github
 
+
+
 [Using a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
+[storing credentials](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
+
 ```
+// to simulate a fresh machine
 docker run -it --name=demo ubuntu:latest /bin/bash
 apt-get update
 apt-get install git
@@ -84,23 +92,22 @@ docker container rm demo
 ### Github
 Live demo - upload exist repo
 
+create a new repo on Github, then:
 ```
-create a new repo on Github
 git branch -M main (master to main)
-git remote add origin https://github.com/yuvalbl/git-and-github.git
+git remote add origin <PATH_TO_REMOTE>
 git push -u origin main
 ```
 
-origin is the remote name (default)
-
-`-u` set `main` on origin to be upstream of local `main`
+* origin is the remote name (default)
+* `-u` set `main` on origin to be upstream of local `main`
 
 ---
 
 ### Github
 Practice - create and clone a repo
 1. create a repository on your github account
-2. `git clone my repo`
+2. `git clone my-repo`
 
 ---
 
@@ -123,8 +130,6 @@ Practice - create a Pull Request
 3. `git push -u origin feature1` (or `HEAD`)
 4. Go to github and open a PR
 5. Merge the PR
-
-1. Terminology recap
 
 ---
 
@@ -166,6 +171,7 @@ How does the repos diagram looks like now?
 * Detached HEAD
 <!-- .element: class="fragment" -->
 * Merge
+<!-- .element: class="fragment" -->
 
 ---
 
@@ -187,4 +193,3 @@ How does the repos diagram looks like now?
 * Remote repository
 <!-- .element: class="fragment" -->
 
----
